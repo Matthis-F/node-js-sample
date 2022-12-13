@@ -13,4 +13,4 @@ jobs:
           command: docker build -t $IMAGE_NAME:latest .
       - run:
           name: Testing docker image
-          command: docker run --rm -d -p 8080:8080 $IMAGE_NAME:latest && wget 127.0.0.1:8080
+          command: docker run --rm -d -p 8080:8080 $IMAGE_NAME:latest && docker ps --last=1 && wget localhost:8080
