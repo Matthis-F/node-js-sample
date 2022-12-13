@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    environment:
+      IMAGE_NAME: matthis-f/node-js-sample
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: docker build -t $IMAGE_NAME:latest .
