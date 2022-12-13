@@ -13,4 +13,4 @@ jobs:
           command: docker build -t $IMAGE_NAME:latest .
       - run:
           name: Testing docker image
-          command: docker run matthis-f/node-js-samble:latest
+          command: docker run matthis-f/node-js-sample:latest
