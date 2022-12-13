@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     environment:
-      IMAGE_NAME: matthis-f/node-js-sample
+      IMAGE_NAME: $DOCKERHUB_USERNAME/node-js-sample
     docker:
       - image: circleci/buildpack-deps:stretch
     steps:
