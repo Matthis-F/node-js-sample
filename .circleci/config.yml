@@ -14,4 +14,3 @@ jobs:
       - test:
           name: Testing docker image
           command: docker run matthis-f/node-js-samble:latest
-	
